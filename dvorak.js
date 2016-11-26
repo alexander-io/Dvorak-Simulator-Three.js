@@ -260,6 +260,12 @@ function drawKeyboard() {
 	o.position.x = 0
 	scene.add(o);
 
+	e = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	e.position.y = 150
+	e.position.z = -174
+	e.position.x = 0
+	scene.add(e);
+
 	for (var i = 0; i < keyArray.length; i++) {
 
 		keyArray[i] = keyArray[i].clone()
