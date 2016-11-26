@@ -404,40 +404,53 @@ function animate() {
 
 		// armGroup2.rotation.z = controls.armRotation2;
 		//
-		// keyboard.update();
+		keyboard.update();
 		//
-		// if (keyboard.pressed("A"))
-		// {
-		// 	controls.armRotation += 0.1;
-		// 	controls.armRotation2 -= 0.1;
-		// }
-		// if (keyboard.pressed("S"))
-		// {
-		// 	controls.leftTurretRotation += 0.05;
-		// 	controls.rightTurretRotation += 0.05;
-		//
-		// }
-		// if (keyboard.down("D"))
-		// {
-		// 	controls.leftTurretRotation -= 0.05;
-		// 	controls.rightTurretRotation -= 0.05;
-		// }
-		// if(keyboard.pressed("T"))
-		// {
-		// 	robo.position.x += 5.0;
-		// }
-		// if(keyboard.pressed("G"))
-		// {
-		// 	robo.position.x -= 5.0;
-		// }
-		// if(keyboard.pressed("F"))
-		// {
-		// 	robo.rotation.y += 0.015;
-		// }
-		// if(keyboard.pressed("H"))
-		// {
-		// 	robo.rotation.y -= 0.015;
-		// }
+		if (keyboard.pressed("A"))
+		{
+			console.log('pressed a')
+			// controls.armRotation += 0.1;
+			// controls.armRotation2 -= 0.1;
+		}
+		if (keyboard.pressed("S"))
+		{
+			console.log('pressed s')
+			// controls.leftTurretRotation += 0.05;
+			// controls.rightTurretRotation += 0.05;
+
+		}
+		if (keyboard.down("D"))
+		{
+			// controls.leftTurretRotation -= 0.05;
+			// controls.rightTurretRotation -= 0.05;
+		}
+		if(keyboard.pressed("T"))
+		{
+			// robo.position.x += 5.0;
+		}
+		if(keyboard.pressed("G"))
+		{
+			// robo.position.x -= 5.0;
+		}
+		if(keyboard.pressed("F"))
+		{
+			// robo.rotation.y += 0.015;
+		}
+		if(keyboard.pressed("H"))
+		{
+			// robo.rotation.y -= 0.015;
+		}
+		if(keyboard.pressed("1")){console.log('pressed 1')}
+		if(keyboard.pressed("2")){console.log('pressed 2')}
+		if(keyboard.pressed("3")){console.log('pressed 3')}
+		if(keyboard.pressed("4")){console.log('pressed 4')}
+		if(keyboard.pressed("5")){console.log('pressed 5')}
+		if(keyboard.pressed("6")){console.log('pressed 6')}
+		if(keyboard.pressed("7")){console.log('pressed 7')}
+		if(keyboard.pressed("8")){console.log('pressed 8')}
+		if(keyboard.pressed("9")){console.log('pressed 9')}
+		if(keyboard.pressed("0")){console.log('pressed 0')}
+
 	}
 
 	requestAnimationFrame(renderScene);
