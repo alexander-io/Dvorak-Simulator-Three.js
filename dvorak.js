@@ -270,11 +270,13 @@ function drawKeyboard() {
 	rightCurly.position.x = 80
 	scene.add(rightCurly);
 
-	let backSpace = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,100), new THREE.MeshBasicMaterial({color: 0x00C853}))
+	let backSpace = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,110), new THREE.MeshBasicMaterial({color: 0x00C853}))
 	backSpace.position.y = 150
-	backSpace.position.z = 340
+	backSpace.position.z = 345
 	backSpace.position.x = 80
 	scene.add(backSpace);
+
+	
 }
 
 
