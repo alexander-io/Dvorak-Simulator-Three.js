@@ -11,8 +11,8 @@ var q, w, e, r, t, y, u, eye, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n,
 var colon, quote, lessthan, greaterthan
 
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
-const ktd = 5;
-const interval = 500;
+const ktd = 7;
+const interval = 200;
 // rotationToggle to controll rotation of keys, abbreviated rt
 const rt = .9;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
@@ -581,9 +581,9 @@ function init() {
 
 	// CONTROLS
 	cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
-	camera.position.set( -1, 750, 0);
+	camera.position.set( -420, 420, 0);
 	// camera.rotation.y = 180*(Math.PI/180)
-	cameraControls.target.set(0,0,0);
+	cameraControls.target.set(0,200,0);
 }
 
 function addToDOM() {
