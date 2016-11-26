@@ -7,7 +7,7 @@ var controls;
 var gui;
 var keyBoard;
 var space, one, two, three, four, five, six, seven, eight, nine, zero;
-var q, w, e, r, t, y, u, i, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n, m;
+var q, w, e, r, t, y, u, eye, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n, m;
 var colon, quote, lessthan, greaterthan
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
 const ktd = 5;
@@ -275,11 +275,11 @@ function drawKeyboard() {
 	u.position.x = 0
 	scene.add(u);
 
-	i = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x66BB6A}))
-	i.position.y = 150
-	i.position.z = -68
-	i.position.x = 0
-	scene.add(i);
+	eye = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x66BB6A}))
+	eye.position.y = 150
+	eye.position.z = -68
+	eye.position.x = 0
+	scene.add(eye);
 
 	d = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x4CAF50}))
 	d.position.y = 150
@@ -606,6 +606,13 @@ function animate() {
 		keyboard.update();
 		//
 
+		if(keyboard.pressed("space")){
+			space.position.y += ktd;
+			setTimeout(function(){
+				space.position.y -= ktd;
+			}, 100)
+			console.log('pressed the space')
+		}
 
 		if (keyboard.pressed("Q"))
 		{
@@ -653,9 +660,9 @@ function animate() {
 			}, 100)
 			console.log('pressed U')}
 		if (keyboard.pressed("I")){
-			i.position.y += ktd
+			eye.position.y += ktd
 			setTimeout(function(){
-				i.position.y -= ktd
+				eye.position.y -= ktd
 			}, 100)
 			console.log('pressed I')}
 		if (keyboard.pressed("O")){
@@ -682,23 +689,93 @@ function animate() {
 				s.position.y -= ktd
 			}, 100)
 			console.log('pressed S')}
+		// ||||||||||||||||||||||||||||||||||||||||||||
+		if (keyboard.pressed("D")){
+			d.position.y += ktd
+			setTimeout(function(){
+				d.position.y -= ktd
+			}, 100)
+			console.log('pressed D')}
+		if (keyboard.pressed("F")){
+			f.position.y += ktd
+			setTimeout(function(){
+				f.position.y -= ktd
+			}, 100)
+			console.log('pressed F')}
+		if (keyboard.pressed("G")){
+			g.position.y += ktd
+			setTimeout(function(){
+				g.position.y -= ktd
+			}, 100)
+			console.log('pressed G')}
+		if (keyboard.pressed("H")){
+			h.position.y += ktd
+			setTimeout(function(){
+				h.position.y -= ktd
+			}, 100)
+			console.log('pressed H')}
+		if (keyboard.pressed("J")){
+			j.position.y += ktd
+			setTimeout(function(){
+				j.position.y -= ktd
+			}, 100)
+			console.log('pressed J')}
+		if (keyboard.pressed("K")){
+			k.position.y += ktd
+			setTimeout(function(){
+				k.position.y -= ktd
+			}, 100)
+			console.log('pressed K')}
+		// ||||||||||||||||||||||||||||||||||||||||||||
+		if (keyboard.pressed("L")){
+			l.position.y += ktd
+			setTimeout(function(){
+				l.position.y -= ktd
+			}, 100)
+			console.log('pressed L')}
+		if (keyboard.pressed("Z")){
+			z.position.y += ktd
+			setTimeout(function(){
+				z.position.y -= ktd
+			}, 100)
+			console.log('pressed Z')}
+		if (keyboard.pressed("X")){
+			x.position.y += ktd
+			setTimeout(function(){
+				x.position.y -= ktd
+			}, 100)
+			console.log('pressed X')}
+		if (keyboard.pressed("C")){
+			c.position.y += ktd
+			setTimeout(function(){
+				c.position.y -= ktd
+			}, 100)
+			console.log('pressed C')}
+		if (keyboard.pressed("V")){
+			v.position.y += ktd
+			setTimeout(function(){
+				v.position.y -= ktd
+			}, 100)
+			console.log('pressed V')}
+		if (keyboard.pressed("B")){
+			b.position.y += ktd
+			setTimeout(function(){
+				b.position.y -= ktd
+			}, 100)
+			console.log('pressed B')}
 
-		if (keyboard.pressed("D")){console.log('pressed D')}
-		if (keyboard.pressed("F")){console.log('pressed F')}
-		if (keyboard.pressed("G")){console.log('pressed G')}
-		if (keyboard.pressed("H")){console.log('pressed H')}
-		if (keyboard.pressed("J")){console.log('pressed J')}
-		if (keyboard.pressed("K")){console.log('pressed K')}
-
-		if (keyboard.pressed("L")){console.log('pressed L')}
-		if (keyboard.pressed("Z")){console.log('pressed Z')}
-		if (keyboard.pressed("X")){console.log('pressed X')}
-		if (keyboard.pressed("C")){console.log('pressed C')}
-		if (keyboard.pressed("V")){console.log('pressed V')}
-		if (keyboard.pressed("B")){console.log('pressed B')}
-
-		if (keyboard.pressed("N")){console.log('pressed N')}
-		if (keyboard.pressed("M")){console.log('pressed M')}
+		if (keyboard.pressed("N")){
+			n.position.y += ktd
+			setTimeout(function(){
+				n.position.y -= ktd
+			}, 100)
+			console.log('pressed N')}
+		if (keyboard.pressed("M")){
+			m.position.y += ktd
+			setTimeout(function(){
+				m.position.y -= ktd
+			}, 100)
+			console.log('pressed M')}
 
 
 
