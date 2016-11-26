@@ -258,6 +258,17 @@ function drawKeyboard() {
 		scene.add(keyArray[i])
 	}
 
+	let leftCurly = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x69F0AE}))
+	leftCurly.position.y = 150
+	leftCurly.position.z = 212
+	leftCurly.position.x = 80
+	scene.add(leftCurly);
+
+	let rightCurly = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x00E676}))
+	rightCurly.position.y = 150
+	rightCurly.position.z = 265
+	rightCurly.position.x = 80
+	scene.add(rightCurly);
 }
 
 
