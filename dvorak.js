@@ -170,14 +170,16 @@ function drawKeyboard() {
 
 	var spaceMap = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/spaceMap.png')})
 	// let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
-	space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), spaceMap)
+	var wireframe = new THREE.MeshBasicMaterial({wireframe: true, color: 0x000000})
+	space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), wireframe)
 	space.position.y = 150
 	space.position.z = -25
 	space.position.x = -80
 	space.rotation.z = 90*(Math.PI/180)
 	scene.add(space);
 
-	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x000000}))
+	// let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x000000}))
+	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), wireframe)
 	tilde.position.y = 150
 	tilde.position.z = -373
 	tilde.position.x = 80
