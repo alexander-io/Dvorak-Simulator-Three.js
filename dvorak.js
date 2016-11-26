@@ -130,7 +130,7 @@ function drawKeyboard() {
 	ctrlKey2.position.z = ctrlKey.position.z*-1
 	scene.add(ctrlKey, ctrlKey2)
 
-	let shiftKey = new THREE.Mesh(new THREE.BoxBufferGeometry(38,20, 140), new THREE.MeshBasicMaterial({color: 0x673AB7}))
+	let shiftKey = new THREE.Mesh(new THREE.BoxBufferGeometry(38,20, 140), new THREE.MeshBasicMaterial({color: 0xFF1744}))
 	let shiftKey2 = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20, 116), new THREE.MeshBasicMaterial({color: 0x673AB7}))
 	shiftKey.position.y = 150
 	shiftKey.position.z = 327
