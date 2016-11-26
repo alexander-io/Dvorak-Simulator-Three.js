@@ -287,25 +287,25 @@ function drawKeyboard() {
 	d.position.x = 0
 	scene.add(d);
 
-	h = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	h = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x43A047}))
 	h.position.y = 150
 	h.position.z = 38
 	h.position.x = 0
 	scene.add(h);
 
-	t = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	t = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x388E3C}))
 	t.position.y = 150
 	t.position.z = 91
 	t.position.x = 0
 	scene.add(t);
 
-	n = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	n = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x2E7D32}))
 	n.position.y = 150
 	n.position.z = 144
 	n.position.x = 0
 	scene.add(n);
 
-	s = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	s = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x1B5E20}))
 	s.position.y = 150
 	s.position.z = 197
 	s.position.x = 0
@@ -351,25 +351,25 @@ function drawKeyboard() {
 	b.position.x = -40
 	scene.add(b);
 
-	m = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	m = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x43A047}))
 	m.position.y = 150
 	m.position.z = 65
 	m.position.x = -40
 	scene.add(m);
 
-	w = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	w = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x388E3C}))
 	w.position.y = 150
 	w.position.z = 118
 	w.position.x = -40
 	scene.add(w);
 
-	v = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	v = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x2E7D32}))
 	v.position.y = 150
 	v.position.z = 171
 	v.position.x = -40
 	scene.add(v);
 
-	z = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	z = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x1B5E20}))
 	z.position.y = 150
 	z.position.z = 224
 	z.position.x = -40
@@ -383,55 +383,55 @@ function drawKeyboard() {
 	quote.position.x = 40
 	scene.add(quote);
 
-	lessthan = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	lessthan = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
 	lessthan.position.y = 150
 	lessthan.position.z = -237
 	lessthan.position.x = 40
 	scene.add(lessthan);
 
-	greaterthan = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	greaterthan = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xA5D6A7}))
 	greaterthan.position.y = 150
 	greaterthan.position.z = -184
 	greaterthan.position.x = 40
 	scene.add(greaterthan);
 
-	p = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	p = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x81C784}))
 	p.position.y = 150
 	p.position.z = -131
 	p.position.x = 40
 	scene.add(p);
 
-	y = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	y = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x66BB6A}))
 	y.position.y = 150
 	y.position.z = -78
 	y.position.x = 40
 	scene.add(y);
 
-	f = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	f = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x4CAF50}))
 	f.position.y = 150
 	f.position.z = -25
 	f.position.x = 40
 	scene.add(f);
 
-	g = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	g = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x43A047}))
 	g.position.y = 150
 	g.position.z = 28
 	g.position.x = 40
 	scene.add(g);
 
-	c = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	c = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x388E3C}))
 	c.position.y = 150
 	c.position.z = 81
 	c.position.x = 40
 	scene.add(c);
 
-	r = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	r = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x2E7D32}))
 	r.position.y = 150
 	r.position.z = 134
 	r.position.x = 40
 	scene.add(r);
 
-	l = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	l = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x1B5E20}))
 	l.position.y = 150
 	l.position.z = 187
 	l.position.x = 40
