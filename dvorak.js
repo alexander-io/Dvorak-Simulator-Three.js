@@ -11,7 +11,7 @@ var q, w, e, r, t, y, u, eye, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n,
 var colon, quote, lessthan, greaterthan
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
 const ktd = 2;
-const interval = 2000;
+const interval = 3000;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
