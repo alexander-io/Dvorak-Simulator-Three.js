@@ -609,18 +609,43 @@ function animate() {
 
 		if (keyboard.pressed("Q"))
 		{
-			space.position.y += 1;
+			q.position.y += ktd;
 			setTimeout(function(){
-				space.position.y -= 1;
+				q.position.y -= ktd;
 			}, 100)
 
 			console.log('pressed q')
 		}
-		if (keyboard.pressed("W")){console.log('pressed w')}
-		if (keyboard.pressed("E")){console.log('pressed e')}
-		if (keyboard.pressed("R")){console.log('pressed R')}
-		if (keyboard.pressed("T")){console.log('pressed T')}
-		if (keyboard.pressed("Y")){console.log('pressed Y')}
+		if (keyboard.pressed("W")){
+			w.position.y += ktd
+			setTimeout(function(){
+				w.position.y -= ktd
+			}, 100)
+			console.log('pressed w')}
+		if (keyboard.pressed("E")){
+			e.position.y += ktd
+			setTimeout(function(){
+				e.position.y -= ktd
+			}, 100)
+			console.log('pressed e')}
+		if (keyboard.pressed("R")){
+			r.position.y += ktd
+			setTimeout(function(){
+				r.position.y -= ktd
+			}, 100)
+			console.log('pressed R')}
+		if (keyboard.pressed("T")){
+			t.position.y += ktd
+			setTimeout(function(){
+				t.position.y -= ktd
+			}, 100)
+			console.log('pressed T')}
+		if (keyboard.pressed("Y")){
+			y.position.y += ktd
+			setTimeout(function(){
+				y.position.y -= ktd
+			}, 100)
+			console.log('pressed Y')}
 
 		if (keyboard.pressed("U")){console.log('pressed U')}
 		if (keyboard.pressed("I")){console.log('pressed I')}
