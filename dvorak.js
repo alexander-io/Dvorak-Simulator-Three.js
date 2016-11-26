@@ -675,32 +675,42 @@ function animate() {
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("U")){
 			u.position.y += ktd
+			u.rotation.z += rt
 			setTimeout(function(){
 				u.position.y -= ktd
+				u.rotation.z -= rt
 			}, interval)
 			console.log('pressed U')}
 		if (keyboard.pressed("I")){
 			eye.position.y += ktd
+			eye.rotation.z += rt
 			setTimeout(function(){
 				eye.position.y -= ktd
+				eye.rotation.z -= rt
 			}, interval)
 			console.log('pressed I')}
 		if (keyboard.pressed("O")){
 			o.position.y += ktd
+			o.rotation.z += rt
 			setTimeout(function(){
 				o.position.y -= ktd
+				o.rotation.z -= rt
 			}, interval)
 			console.log('pressed O')}
 		if (keyboard.pressed("P")){
 			p.position.y += ktd
+			p.rotation.z += rt
 			setTimeout(function(){
 				p.position.y -= ktd
+				p.rotation.z -= rt
 			}, interval)
 			console.log('pressed P')}
 		if (keyboard.pressed("A")){
 			a.position.y += ktd
+			a.rotation.z += rt
 			setTimeout(function(){
 				a.position.y -= ktd
+				a.rotation.z -= rt
 			}, interval)
 			console.log('pressed A')}
 		if (keyboard.pressed("S")){
