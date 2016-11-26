@@ -773,51 +773,67 @@ function animate() {
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("L")){
 			l.position.y += ktd
+			l.rotation.z += rt
 			setTimeout(function(){
 				l.position.y -= ktd
+				l.rotation.z -= rt
 			}, interval)
 			console.log('pressed L')}
 		if (keyboard.pressed("Z")){
 			z.position.y += ktd
+			z.rotation.z += rt
 			setTimeout(function(){
 				z.position.y -= ktd
+				z.rotation.z -= rt
 			}, interval)
 			console.log('pressed Z')}
 		if (keyboard.pressed("X")){
 			x.position.y += ktd
+			x.rotation.z += rt
 			setTimeout(function(){
 				x.position.y -= ktd
+				x.rotation.z -= rt
 			}, interval)
 			console.log('pressed X')}
 		if (keyboard.pressed("C")){
 			c.position.y += ktd
+			c.rotation.z += rt
 			setTimeout(function(){
 				c.position.y -= ktd
+				c.rotation.z -= rt
 			}, interval)
 			console.log('pressed C')}
 		if (keyboard.pressed("V")){
 			v.position.y += ktd
+			v.rotation.z += rt
 			setTimeout(function(){
 				v.position.y -= ktd
+				v.rotation.z -= rt
 			}, interval)
 			console.log('pressed V')}
 		if (keyboard.pressed("B")){
 			b.position.y += ktd
+			b.rotation.z += rt
 			setTimeout(function(){
 				b.position.y -= ktd
+				b.rotation.z -= rt
 			}, interval)
 			console.log('pressed B')}
 
 		if (keyboard.pressed("N")){
 			n.position.y += ktd
+			n.rotation.z += rt
 			setTimeout(function(){
 				n.position.y -= ktd
+				n.rotation.z -= rt
 			}, interval)
 			console.log('pressed N')}
 		if (keyboard.pressed("M")){
 			m.position.y += ktd
+			m.rotation.z += rt
 			setTimeout(function(){
 				m.position.y -= ktd
+				m.rotation.z -= rt
 			}, interval)
 			console.log('pressed M')}
 
