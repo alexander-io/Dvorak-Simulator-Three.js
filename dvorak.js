@@ -263,25 +263,25 @@ function drawKeyboard() {
 	o.position.x = 0
 	scene.add(o);
 
-	e = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	e = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xA5D6A7}))
 	e.position.y = 150
 	e.position.z = -174
 	e.position.x = 0
 	scene.add(e);
 
-	u = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	u = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x81C784}))
 	u.position.y = 150
 	u.position.z = -121
 	u.position.x = 0
 	scene.add(u);
 
-	i = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	i = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x66BB6A}))
 	i.position.y = 150
 	i.position.z = -68
 	i.position.x = 0
 	scene.add(i);
 
-	d = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	d = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x4CAF50}))
 	d.position.y = 150
 	d.position.z = -15
 	d.position.x = 0
@@ -321,31 +321,31 @@ function drawKeyboard() {
 	colon.position.x = -40
 	scene.add(colon);
 
-	q = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	q = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
 	q.position.y = 150
 	q.position.z = -200
 	q.position.x = -40
 	scene.add(q);
 
-	j = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	j = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xA5D6A7}))
 	j.position.y = 150
 	j.position.z = -147
 	j.position.x = -40
 	scene.add(j);
 
-	k = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	k = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x81C784}))
 	k.position.y = 150
 	k.position.z = -94
 	k.position.x = -40
 	scene.add(k);
 
-	x = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	x = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x66BB6A}))
 	x.position.y = 150
 	x.position.z = -41
 	x.position.x = -40
 	scene.add(x);
 
-	b = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	b = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x4CAF50}))
 	b.position.y = 150
 	b.position.z = 12
 	b.position.x = -40
