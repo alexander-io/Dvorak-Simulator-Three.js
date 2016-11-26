@@ -10,7 +10,8 @@ var space, one, two, three, four, five, six, seven, eight, nine, zero;
 var q, w, e, r, t, y, u, eye, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n, m;
 var colon, quote, lessthan, greaterthan
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
-const ktd = 5;
+const ktd = 2;
+const interval = 2000;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -610,7 +611,7 @@ function animate() {
 			space.position.y += ktd;
 			setTimeout(function(){
 				space.position.y -= ktd;
-			}, 100)
+			}, interval)
 			console.log('pressed the space')
 		}
 
@@ -619,162 +620,162 @@ function animate() {
 			q.position.y += ktd;
 			setTimeout(function(){
 				q.position.y -= ktd;
-			}, 100)
+			}, interval)
 			console.log('pressed q')
 		}
 		if (keyboard.pressed("W")){
 			w.position.y += ktd
 			setTimeout(function(){
 				w.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed w')}
 		if (keyboard.pressed("E")){
 			e.position.y += ktd
 			setTimeout(function(){
 				e.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed e')}
 		if (keyboard.pressed("R")){
 			r.position.y += ktd
 			setTimeout(function(){
 				r.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed R')}
 		if (keyboard.pressed("T")){
 			t.position.y += ktd
 			setTimeout(function(){
 				t.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed T')}
 		if (keyboard.pressed("Y")){
 			y.position.y += ktd
 			setTimeout(function(){
 				y.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed Y')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("U")){
 			u.position.y += ktd
 			setTimeout(function(){
 				u.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed U')}
 		if (keyboard.pressed("I")){
 			eye.position.y += ktd
 			setTimeout(function(){
 				eye.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed I')}
 		if (keyboard.pressed("O")){
 			o.position.y += ktd
 			setTimeout(function(){
 				o.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed O')}
 		if (keyboard.pressed("P")){
 			p.position.y += ktd
 			setTimeout(function(){
 				p.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed P')}
 		if (keyboard.pressed("A")){
 			a.position.y += ktd
 			setTimeout(function(){
 				a.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed A')}
 		if (keyboard.pressed("S")){
 			s.position.y += ktd
 			setTimeout(function(){
 				s.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed S')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("D")){
 			d.position.y += ktd
 			setTimeout(function(){
 				d.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed D')}
 		if (keyboard.pressed("F")){
 			f.position.y += ktd
 			setTimeout(function(){
 				f.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed F')}
 		if (keyboard.pressed("G")){
 			g.position.y += ktd
 			setTimeout(function(){
 				g.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed G')}
 		if (keyboard.pressed("H")){
 			h.position.y += ktd
 			setTimeout(function(){
 				h.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed H')}
 		if (keyboard.pressed("J")){
 			j.position.y += ktd
 			setTimeout(function(){
 				j.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed J')}
 		if (keyboard.pressed("K")){
 			k.position.y += ktd
 			setTimeout(function(){
 				k.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed K')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("L")){
 			l.position.y += ktd
 			setTimeout(function(){
 				l.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed L')}
 		if (keyboard.pressed("Z")){
 			z.position.y += ktd
 			setTimeout(function(){
 				z.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed Z')}
 		if (keyboard.pressed("X")){
 			x.position.y += ktd
 			setTimeout(function(){
 				x.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed X')}
 		if (keyboard.pressed("C")){
 			c.position.y += ktd
 			setTimeout(function(){
 				c.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed C')}
 		if (keyboard.pressed("V")){
 			v.position.y += ktd
 			setTimeout(function(){
 				v.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed V')}
 		if (keyboard.pressed("B")){
 			b.position.y += ktd
 			setTimeout(function(){
 				b.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed B')}
 
 		if (keyboard.pressed("N")){
 			n.position.y += ktd
 			setTimeout(function(){
 				n.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed N')}
 		if (keyboard.pressed("M")){
 			m.position.y += ktd
 			setTimeout(function(){
 				m.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed M')}
 
 
@@ -783,61 +784,61 @@ function animate() {
 			one.position.y += ktd
 			setTimeout(function(){
 				one.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 1')}
 		if(keyboard.pressed("2")){
 			two.position.y += ktd
 			setTimeout(function(){
 				two.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 2')}
 		if(keyboard.pressed("3")){
 			three.position.y += ktd
 			setTimeout(function(){
 				three.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 3')}
 		if(keyboard.pressed("4")){
 			four.position.y += ktd
 			setTimeout(function(){
 				four.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 4')}
 		if(keyboard.pressed("5")){
 			five.position.y += ktd
 			setTimeout(function(){
 				five.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 5')}
 		if(keyboard.pressed("6")){
 			six.position.y += ktd
 			setTimeout(function(){
 				six.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 6')}
 		if(keyboard.pressed("7")){
 			seven.position.y += ktd
 			setTimeout(function(){
 				seven.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 7')}
 		if(keyboard.pressed("8")){
 			eight.position.y += ktd
 			setTimeout(function(){
 				eight.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 8')}
 		if(keyboard.pressed("9")){
 			nine.position.y += ktd
 			setTimeout(function(){
 				nine.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 9')}
 		if(keyboard.pressed("0")){
 			zero.position.y += ktd
 			setTimeout(function(){
 				zero.position.y -= ktd
-			}, 100)
+			}, interval)
 			console.log('pressed 0')}
 
 	}
