@@ -311,6 +311,12 @@ function drawKeyboard() {
 	tab.position.z = -358
 	tab.position.x = 40
 	scene.add(tab);
+
+	let capslock = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,90), new THREE.MeshBasicMaterial({color: 0xAEEA00}))
+	capslock.position.y = 150
+	capslock.position.z = -353
+	capslock.position.x = 0
+	scene.add(capslock);
 }
 
 
