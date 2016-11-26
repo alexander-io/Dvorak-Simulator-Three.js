@@ -269,6 +269,12 @@ function drawKeyboard() {
 	rightCurly.position.z = 265
 	rightCurly.position.x = 80
 	scene.add(rightCurly);
+
+	let backSpace = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,100), new THREE.MeshBasicMaterial({color: 0x00C853}))
+	backSpace.position.y = 150
+	backSpace.position.z = 340
+	backSpace.position.x = 80
+	scene.add(backSpace);
 }
 
 
@@ -322,7 +328,8 @@ function init() {
 
 	// CONTROLS
 	cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
-	camera.position.set( 0, 1000, 0);
+	camera.position.set( -1, 750, 0);
+	// camera.rotation.y = 180*(Math.PI/180)
 	cameraControls.target.set(0,0,0);
 }
 
