@@ -162,10 +162,13 @@ function drawKeyboard() {
 	altKey2.position.z = -225
 	scene.add(altKey, altKey2)
 
-	let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
+	var spaceMap = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/spaceMap.png')})
+	// let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
+	let space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), spaceMap)
 	space.position.y = 150
 	space.position.z = -25
 	space.position.x = -80
+	space.rotation.z = 90*(Math.PI/180)
 	scene.add(space);
 
 	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x000000}))
