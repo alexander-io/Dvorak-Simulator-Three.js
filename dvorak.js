@@ -122,7 +122,7 @@ function drawKeyboard() {
 	cube.rotation.y = 180*(Math.PI/180)
 	scene.add(cube)
 
-	let ctrlKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,75), new THREE.MeshBasicMaterial({color: 0xFF5722}))
+	let ctrlKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,75), new THREE.MeshBasicMaterial({color: 0xD500F9}))
 	ctrlKey.position.y = 150
 	ctrlKey.position.z = 360
 	ctrlKey.position.x = -80
@@ -144,7 +144,7 @@ function drawKeyboard() {
 	scene.add(shiftKey, shiftKey2)
 
 
-	let macKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x673AB7}))
+	let macKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE040FB}))
 	macKey.position.y = 150
 	macKey.position.z = 240
 	macKey.position.x = -80
@@ -153,7 +153,7 @@ function drawKeyboard() {
 	macKey2.position.z = -295
 	scene.add(macKey, macKey2)
 
-	let altKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,80), new THREE.MeshBasicMaterial({color: 0xFF5722}))
+	let altKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,80), new THREE.MeshBasicMaterial({color: 0xEA80FC}))
 	altKey.position.y = 150
 	altKey.position.z = 175
 	altKey.position.x = -80
@@ -317,6 +317,12 @@ function drawKeyboard() {
 	capslock.position.z = -353
 	capslock.position.x = 0
 	scene.add(capslock);
+
+	let menu = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,52), new THREE.MeshBasicMaterial({color: 0xFF5722}))
+	menu.position.y = 150
+	menu.position.z = 294
+	menu.position.x = -80
+	scene.add(menu)
 }
 
 
