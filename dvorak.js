@@ -415,7 +415,26 @@ function animate() {
 		if (keyboard.pressed("T")){console.log('pressed T')}
 		if (keyboard.pressed("Y")){console.log('pressed Y')}
 
-		
+		if (keyboard.pressed("U")){console.log('pressed U')}
+		if (keyboard.pressed("I")){console.log('pressed I')}
+		if (keyboard.pressed("O")){console.log('pressed O')}
+		if (keyboard.pressed("P")){console.log('pressed P')}
+		if (keyboard.pressed("A")){console.log('pressed A')}
+		if (keyboard.pressed("S")){console.log('pressed S')}
+
+		if (keyboard.pressed("U")){console.log('pressed U')}
+		if (keyboard.pressed("I")){console.log('pressed I')}
+		if (keyboard.pressed("O")){console.log('pressed O')}
+		if (keyboard.pressed("P")){console.log('pressed P')}
+		if (keyboard.pressed("A")){console.log('pressed A')}
+		if (keyboard.pressed("S")){console.log('pressed S')}
+
+		if (keyboard.pressed("U")){console.log('pressed U')}
+		if (keyboard.pressed("I")){console.log('pressed I')}
+		if (keyboard.pressed("O")){console.log('pressed O')}
+		if (keyboard.pressed("P")){console.log('pressed P')}
+		if (keyboard.pressed("A")){console.log('pressed A')}
+		if (keyboard.pressed("S")){console.log('pressed S')}
 
 
 		if(keyboard.pressed("1")){console.log('pressed 1')}
