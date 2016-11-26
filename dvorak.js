@@ -173,6 +173,7 @@ function drawKeyboard() {
 	tilde.position.z = -373
 	tilde.position.x = 80
 	scene.add(tilde);
+	let keyArray = []
 
 	let one = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
 	one.position.y = 150
@@ -235,6 +236,25 @@ function drawKeyboard() {
 	zero.position.z = 159
 	zero.position.x = 80
 	scene.add(zero);
+
+	keyArray.push(one, two, three, four, five, six, seven, eight, nine, zero)
+	for (var i = 0; i < keyArray.length; i++) {
+		keyArray[i] = keyArray[i].clone()
+		keyArray[i].position.x -=40
+		keyArray[i].position.z +=30
+		scene.add(keyArray[i])
+
+		keyArray[i] = keyArray[i].clone()
+		keyArray[i].position.x -=40
+		keyArray[i].position.z +=10
+		scene.add(keyArray[i])
+
+		keyArray[i] = keyArray[i].clone()
+		keyArray[i].position.x -=40
+		keyArray[i].position.z +=27
+		scene.add(keyArray[i])
+	}
+
 }
 
 
