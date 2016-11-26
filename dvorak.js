@@ -149,8 +149,18 @@ function drawKeyboard() {
 	macKey.position.z = 240
 	macKey.position.x = -80
 	let macKey2 = macKey.clone()
-	macKey2.position.z = macKey.position.z*-1
+	// macKey2.position.z = macKey.position.z*-1
+	macKey2.position.z = -295
 	scene.add(macKey, macKey2)
+
+	let altKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,80), new THREE.MeshBasicMaterial({color: 0xFF5722}))
+	altKey.position.y = 150
+	altKey.position.z = 175
+	altKey.position.x = -80
+	let altKey2 = altKey.clone()
+	// altKey2.position.z = altKey.position.z*-1
+	altKey2.position.z = -225
+	scene.add(altKey, altKey2)
 
 	// scene.add(robo);
 
