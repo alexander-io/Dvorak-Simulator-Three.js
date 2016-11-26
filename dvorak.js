@@ -6,7 +6,7 @@ var cameraControls;
 var controls;
 var gui;
 var keyBoard;
-var space, one, two;
+var space, one, two, three, four, five, six, seven, eight, nine, zero;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -192,50 +192,50 @@ function drawKeyboard() {
 	scene.add(two);
 
 
-	let three = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xA5D6A7}))
+	three = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xA5D6A7}))
 	three.position.y = 150
 	three.position.z = -213
 	three.position.x = 80
 	scene.add(three);
 
-	let four = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x81C784}))
+	four = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x81C784}))
 	four.position.y = 150
 	four.position.z = -159
 	four.position.x = 80
 	scene.add(four);
 
-	let five = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x66BB6A}))
+	five = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x66BB6A}))
 	five.position.y = 150
 	five.position.z = -106
 	five.position.x = 80
 	scene.add(five);
 
-	let six = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x4CAF50}))
+	six = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x4CAF50}))
 	six.position.y = 150
 	six.position.z = -53
 	six.position.x = 80
 	scene.add(six);
 
 
-	let seven = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x43A047}))
+	seven = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x43A047}))
 	seven.position.y = 150
 	seven.position.z = 0
 	seven.position.x = 80
 	scene.add(seven);
 
-	let eight = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x388E3C}))
+	eight = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x388E3C}))
 	eight.position.y = 150
 	eight.position.z = 53
 	eight.position.x = 80
 	scene.add(eight);
 
-	let nine = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x2E7D32}))
+	nine = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x2E7D32}))
 	nine.position.y = 150
 	nine.position.z = 106
 	nine.position.x = 80
 	scene.add(nine);
 
-	let zero = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x1B5E20}))
+	zero = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x1B5E20}))
 	zero.position.y = 150
 	zero.position.z = 159
 	zero.position.x = 80
