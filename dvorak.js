@@ -133,7 +133,7 @@ function drawKeyboard() {
 	let shiftKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,75), new THREE.MeshBasicMaterial({color: 0xFF5722}))
 	shiftKey.position.y = 150
 	shiftKey.position.z = 0
-	shiftKey.position.x = -80
+	shiftKey.position.x = -40
 	let shiftKey2 = shiftKey.clone()
 	shiftKey2.position.z = shiftKey.position.z*-1
 	scene.add(shiftKey, shiftKey2)
@@ -211,8 +211,8 @@ function init() {
 
 	// CONTROLS
 	cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
-	camera.position.set( -800, 600, -500);
-	cameraControls.target.set(4,301,92);
+	camera.position.set( 0, 1000, 0);
+	cameraControls.target.set(0,0,0);
 }
 
 function addToDOM() {
