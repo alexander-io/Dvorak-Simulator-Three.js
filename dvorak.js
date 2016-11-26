@@ -115,8 +115,28 @@ function drawKeyboard() {
 	cylClone.position.y = 75;
 	cylClone.position.z = 0;
 
+	var dvorakImg = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/dvorak.png')})
+	// var cube = new THREE.Mesh(new THREE.BoxBufferGeometry(270,200,800), new THREE.MeshBasicMaterial({color: 0x00ff00}))
+	var cube = new THREE.Mesh(new THREE.BoxBufferGeometry(270,200,800), dvorakImg)
+	cube.rotation.z = 90*(Math.PI/180)
+	cube.rotation.y = 180*(Math.PI/180)
+	scene.add(cube)
 
+	let ctrlKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,75), new THREE.MeshBasicMaterial({color: 0xFF5722}))
+	ctrlKey.position.y = 150
+	ctrlKey.position.z = 360
+	ctrlKey.position.x = -80
+	let ctrlKey2 = ctrlKey.clone()
+	ctrlKey2.position.z = ctrlKey.position.z*-1
+	scene.add(ctrlKey, ctrlKey2)
 
+	let shiftKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,75), new THREE.MeshBasicMaterial({color: 0xFF5722}))
+	shiftKey.position.y = 150
+	shiftKey.position.z = 0
+	shiftKey.position.x = -80
+	let shiftKey2 = shiftKey.clone()
+	shiftKey2.position.z = shiftKey.position.z*-1
+	scene.add(shiftKey, shiftKey2)
 
 
 
