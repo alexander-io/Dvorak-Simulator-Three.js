@@ -411,9 +411,11 @@ function animate() {
 		if (keyboard.pressed("Q")){console.log('pressed q')}
 		if (keyboard.pressed("W")){console.log('pressed w')}
 		if (keyboard.pressed("E")){console.log('pressed e')}
-		if (keyboard.pressed("Q")){console.log('pressed q')}
-		if (keyboard.pressed("W")){console.log('pressed w')}
-		if (keyboard.pressed("E")){console.log('pressed e')}
+		if (keyboard.pressed("R")){console.log('pressed R')}
+		if (keyboard.pressed("T")){console.log('pressed T')}
+		if (keyboard.pressed("Y")){console.log('pressed Y')}
+
+		
 
 
 		if(keyboard.pressed("1")){console.log('pressed 1')}
