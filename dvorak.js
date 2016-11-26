@@ -7,6 +7,9 @@ var controls;
 var gui;
 var keyBoard;
 var space, one, two, three, four, five, six, seven, eight, nine, zero;
+
+// set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
+const ktd = 2;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -452,63 +455,63 @@ function animate() {
 
 
 		if(keyboard.pressed("1")){
-			one.position.y += 1;
+			one.position.y += ktd
 			setTimeout(function(){
-				one.position.y -= 1;
+				one.position.y -= ktd
 			}, 100)
 			console.log('pressed 1')}
 		if(keyboard.pressed("2")){
-			two.position.y += 1;
+			two.position.y += ktd
 			setTimeout(function(){
-				two.position.y -= 1;
+				two.position.y -= ktd
 			}, 100)
 			console.log('pressed 2')}
 		if(keyboard.pressed("3")){
-			three.position.y += 1;
+			three.position.y += ktd
 			setTimeout(function(){
-				three.position.y -= 1;
+				three.position.y -= ktd
 			}, 100)
 			console.log('pressed 3')}
 		if(keyboard.pressed("4")){
-			four.position.y += 1;
+			four.position.y += ktd
 			setTimeout(function(){
-				four.position.y -= 1;
+				four.position.y -= ktd
 			}, 100)
 			console.log('pressed 4')}
 		if(keyboard.pressed("5")){
-			five.position.y += 1;
+			five.position.y += ktd
 			setTimeout(function(){
-				five.position.y -= 1;
+				five.position.y -= ktd
 			}, 100)
 			console.log('pressed 5')}
 		if(keyboard.pressed("6")){
-			six.position.y += 1;
+			six.position.y += ktd
 			setTimeout(function(){
-				six.position.y -= 1;
+				six.position.y -= ktd
 			}, 100)
 			console.log('pressed 6')}
 		if(keyboard.pressed("7")){
-			seven.position.y += 1;
+			seven.position.y += ktd
 			setTimeout(function(){
-				seven.position.y -= 1;
+				seven.position.y -= ktd
 			}, 100)
 			console.log('pressed 7')}
 		if(keyboard.pressed("8")){
-			eight.position.y += 1;
+			eight.position.y += ktd
 			setTimeout(function(){
-				eight.position.y -= 1;
+				eight.position.y -= ktd
 			}, 100)
 			console.log('pressed 8')}
 		if(keyboard.pressed("9")){
-			nine.position.y += 1;
+			nine.position.y += ktd
 			setTimeout(function(){
-				nine.position.y -= 1;
+				nine.position.y -= ktd
 			}, 100)
 			console.log('pressed 9')}
 		if(keyboard.pressed("0")){
-			zero.position.y += 1;
+			zero.position.y += ktd
 			setTimeout(function(){
-				zero.position.y -= 1;
+				zero.position.y -= ktd
 			}, 100)
 			console.log('pressed 0')}
 
