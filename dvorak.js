@@ -451,8 +451,18 @@ function animate() {
 
 
 
-		if(keyboard.pressed("1")){console.log('pressed 1')}
-		if(keyboard.pressed("2")){console.log('pressed 2')}
+		if(keyboard.pressed("1")){
+			one.position.y += 1;
+			setTimeout(function(){
+				one.position.y -= 1;
+			}, 100
+			console.log('pressed 1')}
+		if(keyboard.pressed("2")){
+			two.position.y += 1;
+			setTimeout(function(){
+				two.position.y -= 1;
+			}, 100
+			console.log('pressed 2')}
 		if(keyboard.pressed("3")){console.log('pressed 3')}
 		if(keyboard.pressed("4")){console.log('pressed 4')}
 		if(keyboard.pressed("5")){console.log('pressed 5')}
