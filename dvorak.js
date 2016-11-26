@@ -6,6 +6,7 @@ var cameraControls;
 var controls;
 var gui;
 var keyBoard;
+var space;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -164,7 +165,7 @@ function drawKeyboard() {
 
 	var spaceMap = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/spaceMap.png')})
 	// let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
-	let space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), spaceMap)
+	space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), spaceMap)
 	space.position.y = 150
 	space.position.z = -25
 	space.position.x = -80
@@ -364,9 +365,10 @@ function init() {
 	// renderScene();
 
 	// function renderScene(){
-	// 	// lureGlow.rotation.x += controls.rotationSpeedX;
-	// 	// lureGlow.rotation.y += controls.rotationSpeedY;
-	// 	// lureGlow.rotation.z += controls.rotationSpeedZ;
+	// 	space.position.y +=
+	// // 	// lureGlow.rotation.x += controls.rotationSpeedX;
+	// // 	// lureGlow.rotation.y += controls.rotationSpeedY;
+	// // 	// lureGlow.rotation.z += controls.rotationSpeedZ;
 	// }
 	//
 	// requestAnimationFrame(renderScene);
@@ -408,7 +410,15 @@ function animate() {
 		//
 
 
-		if (keyboard.pressed("Q")){console.log('pressed q')}
+		if (keyboard.pressed("Q"))
+		{
+			space.position.y += 1;
+			setTimeout(function(){
+				space.position.y -= 1;
+			}, 100)
+
+			console.log('pressed q')
+		}
 		if (keyboard.pressed("W")){console.log('pressed w')}
 		if (keyboard.pressed("E")){console.log('pressed e')}
 		if (keyboard.pressed("R")){console.log('pressed R')}
@@ -438,7 +448,7 @@ function animate() {
 
 		if (keyboard.pressed("N")){console.log('pressed N')}
 		if (keyboard.pressed("M")){console.log('pressed M')}
-		
+
 
 
 		if(keyboard.pressed("1")){console.log('pressed 1')}
