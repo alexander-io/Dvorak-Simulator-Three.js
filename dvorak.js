@@ -406,40 +406,16 @@ function animate() {
 		//
 		keyboard.update();
 		//
-		if (keyboard.pressed("A"))
-		{
-			console.log('pressed a')
-			// controls.armRotation += 0.1;
-			// controls.armRotation2 -= 0.1;
-		}
-		if (keyboard.pressed("S"))
-		{
-			console.log('pressed s')
-			// controls.leftTurretRotation += 0.05;
-			// controls.rightTurretRotation += 0.05;
 
-		}
-		if (keyboard.down("D"))
-		{
-			// controls.leftTurretRotation -= 0.05;
-			// controls.rightTurretRotation -= 0.05;
-		}
-		if(keyboard.pressed("T"))
-		{
-			// robo.position.x += 5.0;
-		}
-		if(keyboard.pressed("G"))
-		{
-			// robo.position.x -= 5.0;
-		}
-		if(keyboard.pressed("F"))
-		{
-			// robo.rotation.y += 0.015;
-		}
-		if(keyboard.pressed("H"))
-		{
-			// robo.rotation.y -= 0.015;
-		}
+
+		if (keyboard.pressed("Q")){console.log('pressed q')}
+		if (keyboard.pressed("W")){console.log('pressed w')}
+		if (keyboard.pressed("E")){console.log('pressed e')}
+		if (keyboard.pressed("Q")){console.log('pressed q')}
+		if (keyboard.pressed("W")){console.log('pressed w')}
+		if (keyboard.pressed("E")){console.log('pressed e')}
+
+
 		if(keyboard.pressed("1")){console.log('pressed 1')}
 		if(keyboard.pressed("2")){console.log('pressed 2')}
 		if(keyboard.pressed("3")){console.log('pressed 3')}
