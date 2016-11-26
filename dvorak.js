@@ -293,6 +293,18 @@ function drawKeyboard() {
 	pipe.position.z = 360
 	pipe.position.x = 40
 	scene.add(pipe);
+
+	let dash = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC6FF00}))
+	dash.position.y = 150
+	dash.position.z = 252
+	dash.position.x = 0
+	scene.add(dash);
+
+	let enter = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,120), new THREE.MeshBasicMaterial({color: 0xAEEA00}))
+	enter.position.y = 150
+	enter.position.z = 340
+	enter.position.x = 0
+	scene.add(enter);
 }
 
 
