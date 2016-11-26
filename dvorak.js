@@ -11,8 +11,10 @@ var q, w, e, r, t, y, u, eye, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n,
 var colon, quote, lessthan, greaterthan
 
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
-const ktd = 2;
-const interval = 100;
+const ktd = 4;
+const interval = 250;
+// rotationToggle to controll rotation of keys, abbreviated rt
+const rt = .1;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -612,8 +614,10 @@ function animate() {
 
 		if(keyboard.pressed("space")){
 			space.position.y += ktd;
+			space.rotation.z += rt
 			setTimeout(function(){
 				space.position.y -= ktd;
+				space.rotation.z -= rt
 			}, interval)
 			console.log('pressed the space')
 		}
@@ -621,15 +625,19 @@ function animate() {
 		if (keyboard.pressed("Q"))
 		{
 			q.position.y += ktd;
+			q.rotation.z += rt
 			setTimeout(function(){
 				q.position.y -= ktd;
+				q.rotation.z -= rt
 			}, interval)
 			console.log('pressed q')
 		}
 		if (keyboard.pressed("W")){
 			w.position.y += ktd
+			w.rotation.z += rt
 			setTimeout(function(){
 				w.position.y -= ktd
+				w.rotation.z -= rt
 			}, interval)
 			console.log('pressed w')}
 		if (keyboard.pressed("E")){
