@@ -9,9 +9,10 @@ var keyBoard;
 var space, one, two, three, four, five, six, seven, eight, nine, zero;
 var q, w, e, r, t, y, u, eye, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n, m;
 var colon, quote, lessthan, greaterthan
+
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
 const ktd = 2;
-const interval = 3000;
+const interval = 100;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -170,7 +171,7 @@ function drawKeyboard() {
 
 	var spaceMap = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/spaceMap.png')})
 	// let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
-	var wireframe = new THREE.MeshBasicMaterial({wireframe: true, color: 0x000000})
+	var wireframe = new THREE.MeshBasicMaterial({wireframe: true, wireframeLinewidth:2, color: 0x18FFFF})
 	space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), wireframe)
 	space.position.y = 150
 	space.position.z = -25
@@ -529,7 +530,7 @@ function drawKeyboard() {
 
 function init() {
 	var canvasWidth = 1000;
-	var canvasHeight = 600;
+	var canvasHeight = 400;
 	var canvasRatio = canvasWidth / canvasHeight;
 
 	// RENDERER
