@@ -463,14 +463,54 @@ function animate() {
 				two.position.y -= 1;
 			}, 100)
 			console.log('pressed 2')}
-		if(keyboard.pressed("3")){console.log('pressed 3')}
-		if(keyboard.pressed("4")){console.log('pressed 4')}
-		if(keyboard.pressed("5")){console.log('pressed 5')}
-		if(keyboard.pressed("6")){console.log('pressed 6')}
-		if(keyboard.pressed("7")){console.log('pressed 7')}
-		if(keyboard.pressed("8")){console.log('pressed 8')}
-		if(keyboard.pressed("9")){console.log('pressed 9')}
-		if(keyboard.pressed("0")){console.log('pressed 0')}
+		if(keyboard.pressed("3")){
+			three.position.y += 1;
+			setTimeout(function(){
+				three.position.y -= 1;
+			}, 100)
+			console.log('pressed 3')}
+		if(keyboard.pressed("4")){
+			four.position.y += 1;
+			setTimeout(function(){
+				four.position.y -= 1;
+			}, 100)
+			console.log('pressed 4')}
+		if(keyboard.pressed("5")){
+			five.position.y += 1;
+			setTimeout(function(){
+				five.position.y -= 1;
+			}, 100)
+			console.log('pressed 5')}
+		if(keyboard.pressed("6")){
+			six.position.y += 1;
+			setTimeout(function(){
+				six.position.y -= 1;
+			}, 100)
+			console.log('pressed 6')}
+		if(keyboard.pressed("7")){
+			seven.position.y += 1;
+			setTimeout(function(){
+				seven.position.y -= 1;
+			}, 100)
+			console.log('pressed 7')}
+		if(keyboard.pressed("8")){
+			eight.position.y += 1;
+			setTimeout(function(){
+				eight.position.y -= 1;
+			}, 100)
+			console.log('pressed 8')}
+		if(keyboard.pressed("9")){
+			nine.position.y += 1;
+			setTimeout(function(){
+				nine.position.y -= 1;
+			}, 100)
+			console.log('pressed 9')}
+		if(keyboard.pressed("0")){
+			zero.position.y += 1;
+			setTimeout(function(){
+				zero.position.y -= 1;
+			}, 100)
+			console.log('pressed 0')}
 
 	}
 
