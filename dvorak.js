@@ -6,7 +6,7 @@ var cameraControls;
 var controls;
 var gui;
 var keyBoard;
-var space;
+var space, one, two;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -179,13 +179,13 @@ function drawKeyboard() {
 	scene.add(tilde);
 	let keyArray = []
 
-	let one = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	one = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
 	one.position.y = 150
 	one.position.z = -320
 	one.position.x = 80
 	scene.add(one);
 
-	let two = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	two = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
 	two.position.y = 150
 	two.position.z = -267
 	two.position.x = 80
@@ -455,13 +455,13 @@ function animate() {
 			one.position.y += 1;
 			setTimeout(function(){
 				one.position.y -= 1;
-			}, 100
+			}, 100)
 			console.log('pressed 1')}
 		if(keyboard.pressed("2")){
 			two.position.y += 1;
 			setTimeout(function(){
 				two.position.y -= 1;
-			}, 100
+			}, 100)
 			console.log('pressed 2')}
 		if(keyboard.pressed("3")){console.log('pressed 3')}
 		if(keyboard.pressed("4")){console.log('pressed 4')}
