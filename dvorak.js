@@ -715,45 +715,59 @@ function animate() {
 			console.log('pressed A')}
 		if (keyboard.pressed("S")){
 			s.position.y += ktd
+			s.rotation.z += rt
 			setTimeout(function(){
 				s.position.y -= ktd
+				s.rotation.z -= rt
 			}, interval)
 			console.log('pressed S')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("D")){
 			d.position.y += ktd
+			d.rotation.z += rt
 			setTimeout(function(){
 				d.position.y -= ktd
+				d.rotation.z -= rt
 			}, interval)
 			console.log('pressed D')}
 		if (keyboard.pressed("F")){
 			f.position.y += ktd
+			f.rotation.z += rt
 			setTimeout(function(){
 				f.position.y -= ktd
+				f.rotation.z -= rt
 			}, interval)
 			console.log('pressed F')}
 		if (keyboard.pressed("G")){
 			g.position.y += ktd
+			g.rotation.z += rt
 			setTimeout(function(){
 				g.position.y -= ktd
+				g.rotation.z -= rt
 			}, interval)
 			console.log('pressed G')}
 		if (keyboard.pressed("H")){
 			h.position.y += ktd
+			h.rotation.z += rt
 			setTimeout(function(){
 				h.position.y -= ktd
+				h.rotation.z -= rt
 			}, interval)
 			console.log('pressed H')}
 		if (keyboard.pressed("J")){
 			j.position.y += ktd
+			j.rotation.z += rt
 			setTimeout(function(){
 				j.position.y -= ktd
+				j.rotation.z -= rt
 			}, interval)
 			console.log('pressed J')}
 		if (keyboard.pressed("K")){
 			k.position.y += ktd
+			k.rotation.z += rt
 			setTimeout(function(){
 				k.position.y -= ktd
+				k.rotation.z -= rt
 			}, interval)
 			console.log('pressed K')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
