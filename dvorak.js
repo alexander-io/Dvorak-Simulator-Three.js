@@ -150,7 +150,7 @@ function drawKeyboard() {
 	scene.add(shiftKey, shiftKey2)
 
 
-	let macKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE040FB}))
+	let macKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x69F0AE}))
 	macKey.position.y = 150
 	macKey.position.z = 240
 	macKey.position.x = -80
@@ -159,7 +159,7 @@ function drawKeyboard() {
 	macKey2.position.z = -295
 	scene.add(macKey, macKey2)
 
-	let altKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,80), new THREE.MeshBasicMaterial({color: 0xEA80FC}))
+	let altKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,80), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
 	altKey.position.y = 150
 	altKey.position.z = 175
 	altKey.position.x = -80
@@ -493,13 +493,13 @@ function drawKeyboard() {
 	pipe.position.x = 40
 	scene.add(pipe);
 
-	let dash = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC6FF00}))
+	let dash = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x00E676}))
 	dash.position.y = 150
 	dash.position.z = 252
 	dash.position.x = 0
 	scene.add(dash);
 
-	let enter = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,120), new THREE.MeshBasicMaterial({color: 0xAEEA00}))
+	let enter = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,120), new THREE.MeshBasicMaterial({color: 0x00C853}))
 	enter.position.y = 150
 	enter.position.z = 340
 	enter.position.x = 0
@@ -511,7 +511,7 @@ function drawKeyboard() {
 	tab.position.x = 40
 	scene.add(tab);
 
-	let capslock = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,90), new THREE.MeshBasicMaterial({color: 0xAEEA00}))
+	let capslock = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,90), new THREE.MeshBasicMaterial({color: 0x00E676}))
 	capslock.position.y = 150
 	capslock.position.z = -353
 	capslock.position.x = 0
