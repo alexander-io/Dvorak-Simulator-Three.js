@@ -176,10 +176,22 @@ function drawKeyboard() {
 
 	let two = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
 	two.position.y = 150
-	two.position.z = -266
+	two.position.z = -267
 	two.position.x = 80
 	scene.add(two);
 
+
+	let three = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xA5D6A7}))
+	three.position.y = 150
+	three.position.z = -213
+	three.position.x = 80
+	scene.add(three);
+
+	let four = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x81C784}))
+	four.position.y = 150
+	four.position.z = -159
+	four.position.x = 80
+	scene.add(four);
 }
 
 
