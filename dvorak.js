@@ -162,7 +162,11 @@ function drawKeyboard() {
 	altKey2.position.z = -225
 	scene.add(altKey, altKey2)
 
-	// scene.add(robo);
+	let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
+	space.position.y = 150
+	space.position.z = -25
+	space.position.x = -80
+	scene.add(space);
 
 }
 
