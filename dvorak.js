@@ -12,9 +12,9 @@ var colon, quote, lessthan, greaterthan
 
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
 var ktd = 7;
-const interval = 1500;
+var interval = 1500;
 // rotationToggle to controll rotation of keys, abbreviated rt
-const rt = .3;
+var rt = .3;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -546,6 +546,9 @@ function init() {
 	// gui CONTROLS
 	controls = new function(){
 		this.keyTravelDistance = 3.00;
+		this.keyRotation = .3;
+		this.timeInterval = 1500;
+
 		// this.rotationSpeedX = 0.00;
 		// this.rotationSpeedY = 0.01;
 		// this.rotationSpeedZ = 0.01;
@@ -557,6 +560,8 @@ function init() {
 
 	gui = new dat.GUI();
 	gui.add(controls, 'keyTravelDistance', -7, 7)
+	gui.add(controls, 'timeInterval', 250, 5000)
+	gui.add(controls, 'keyRotation', 0, 1)
 	// gui.add(controls, 'rotationSpeedX', 0, 0.5);
 	// gui.add(controls, 'rotationSpeedY', 0, 0.5);
 	// gui.add(controls, 'rotationSpeedZ', 0, 0.5);
@@ -596,6 +601,8 @@ function animate() {
 	renderScene();
 	function renderScene(){
 		ktd = controls.keyTravelDistance;
+		interval = controls.timeInterval;
+		rt = controls.keyRotation;
 		// lureGlow.rotation.x += controls.rotationSpeedX;
 		// lureGlow.rotation.y += controls.rotationSpeedY;
 		// lureGlow.rotation.z += controls.rotationSpeedZ;
