@@ -8,7 +8,7 @@ var gui;
 var keyBoard;
 var space, one, two, three, four, five, six, seven, eight, nine, zero;
 var q, w, e, r, t, y, u, i, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n, m;
-var colon
+var colon, quote, lessthan, greaterthan
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
 const ktd = 5;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
@@ -375,6 +375,67 @@ function drawKeyboard() {
 	z.position.x = -40
 	scene.add(z);
 
+	// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+	quote = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	quote.position.y = 150
+	quote.position.z = -290
+	quote.position.x = 40
+	scene.add(quote);
+
+	lessthan = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	lessthan.position.y = 150
+	lessthan.position.z = -237
+	lessthan.position.x = 40
+	scene.add(lessthan);
+
+	greaterthan = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	greaterthan.position.y = 150
+	greaterthan.position.z = -184
+	greaterthan.position.x = 40
+	scene.add(greaterthan);
+
+	p = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	p.position.y = 150
+	p.position.z = -131
+	p.position.x = 40
+	scene.add(p);
+
+	y = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	y.position.y = 150
+	y.position.z = -78
+	y.position.x = 40
+	scene.add(y);
+
+	f = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	f.position.y = 150
+	f.position.z = -25
+	f.position.x = 40
+	scene.add(f);
+
+	g = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	g.position.y = 150
+	g.position.z = 28
+	g.position.x = 40
+	scene.add(g);
+
+	c = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	c.position.y = 150
+	c.position.z = 81
+	c.position.x = 40
+	scene.add(c);
+
+	r = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	r.position.y = 150
+	r.position.z = 134
+	r.position.x = 40
+	scene.add(r);
+
+	l = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
+	l.position.y = 150
+	l.position.z = 187
+	l.position.x = 40
+	scene.add(l);
 
 
 	for (var i = 0; i < keyArray.length; i++) {
@@ -382,7 +443,7 @@ function drawKeyboard() {
 		keyArray[i] = keyArray[i].clone()
 		keyArray[i].position.x -=40
 		keyArray[i].position.z +=30
-		scene.add(keyArray[i])
+		// scene.add(keyArray[i])
 
 		keyArray[i] = keyArray[i].clone()
 		keyArray[i].position.x -=40
