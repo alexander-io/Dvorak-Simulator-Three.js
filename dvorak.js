@@ -144,24 +144,15 @@ function drawKeyboard() {
 	scene.add(shiftKey, shiftKey2)
 
 
+	let macKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x673AB7}))
+	macKey.position.y = 150
+	macKey.position.z = 240
+	macKey.position.x = -80
+	let macKey2 = macKey.clone()
+	macKey2.position.z = macKey.position.z*-1
+	scene.add(macKey, macKey2)
 
-	var icosahedronGeometry = new THREE.IcosahedronGeometry(300, 2);
-	var icosahedron = new THREE.Mesh(icosahedronGeometry, material);
-	windowIcosahedron =  new THREE.Mesh(new THREE.IcosahedronGeometry(170, 2), new THREE.MeshBasicMaterial( {color: 0x000000} ));
-	var sideIcosahedron =  new THREE.Mesh(new THREE.IcosahedronGeometry(50, 2), new THREE.MeshBasicMaterial( {color: 0x000000} ));
-	var sideIcosahedron2 = sideIcosahedron.clone();
-	sideIcosahedron.position.x = 00;
-	sideIcosahedron2.position.x = 0;
-	sideIcosahedron.position.y = 0;
-	sideIcosahedron2.position.y = 0;
-	sideIcosahedron.position.z =  325;
-	sideIcosahedron2.position.z = -325;
-
-	scene.add(sideIcosahedron);
-	scene.add(sideIcosahedron2);
-
-
-	scene.add(robo);
+	// scene.add(robo);
 
 }
 
