@@ -11,10 +11,10 @@ var q, w, e, r, t, y, u, eye, o, p, a, s, d, f, g, h, j, k, l, z, x, c, v, b, n,
 var colon, quote, lessthan, greaterthan
 
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
-const ktd = 7;
-const interval = 200;
+var ktd = 7;
+const interval = 1500;
 // rotationToggle to controll rotation of keys, abbreviated rt
-const rt = .9;
+const rt = .3;
 // var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
 // var leftArmGroup, rightArmGroup;
 // var armGroup, armGroup2;
@@ -545,7 +545,7 @@ function init() {
 
 	// gui CONTROLS
 	controls = new function(){
-		this.keyboardRotationX = 0.00;
+		this.keyTravelDistance = 3.00;
 		// this.rotationSpeedX = 0.00;
 		// this.rotationSpeedY = 0.01;
 		// this.rotationSpeedZ = 0.01;
@@ -556,7 +556,7 @@ function init() {
 	}
 
 	gui = new dat.GUI();
-	gui.add(controls, 'keyboardRotationX', 0, 0.5)
+	gui.add(controls, 'keyTravelDistance', -7, 7)
 	// gui.add(controls, 'rotationSpeedX', 0, 0.5);
 	// gui.add(controls, 'rotationSpeedY', 0, 0.5);
 	// gui.add(controls, 'rotationSpeedZ', 0, 0.5);
@@ -568,10 +568,11 @@ function init() {
 	// renderScene();
 
 	// function renderScene(){
-	// 	space.position.y +=
+		// space.position.y +=
 	// // 	// lureGlow.rotation.x += controls.rotationSpeedX;
 	// // 	// lureGlow.rotation.y += controls.rotationSpeedY;
 	// // 	// lureGlow.rotation.z += controls.rotationSpeedZ;
+
 	// }
 	//
 	// requestAnimationFrame(renderScene);
@@ -581,9 +582,9 @@ function init() {
 
 	// CONTROLS
 	cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
-	camera.position.set( -420, 420, 0);
+	camera.position.set( -470, 350, 0);
 	// camera.rotation.y = 180*(Math.PI/180)
-	cameraControls.target.set(0,200,0);
+	cameraControls.target.set(0,180,0);
 }
 
 function addToDOM() {
@@ -594,6 +595,7 @@ function addToDOM() {
 function animate() {
 	renderScene();
 	function renderScene(){
+		ktd = controls.keyTravelDistance;
 		// lureGlow.rotation.x += controls.rotationSpeedX;
 		// lureGlow.rotation.y += controls.rotationSpeedY;
 		// lureGlow.rotation.z += controls.rotationSpeedZ;
