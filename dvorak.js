@@ -168,6 +168,12 @@ function drawKeyboard() {
 	space.position.x = -80
 	scene.add(space);
 
+	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x000000}))
+	tilde.position.y = 150
+	tilde.position.z = -373
+	tilde.position.x = 80
+	scene.add(tilde);
+
 	let one = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
 	one.position.y = 150
 	one.position.z = -320
