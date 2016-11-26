@@ -642,26 +642,34 @@ function animate() {
 			console.log('pressed w')}
 		if (keyboard.pressed("E")){
 			e.position.y += ktd
+			e.rotation.z += rt
 			setTimeout(function(){
 				e.position.y -= ktd
+				e.rotation.z -= rt
 			}, interval)
 			console.log('pressed e')}
 		if (keyboard.pressed("R")){
 			r.position.y += ktd
+			r.rotation.z += rt
 			setTimeout(function(){
 				r.position.y -= ktd
+				r.rotation.z -= rt
 			}, interval)
 			console.log('pressed R')}
 		if (keyboard.pressed("T")){
 			t.position.y += ktd
+			t.rotation.z += rt
 			setTimeout(function(){
 				t.position.y -= ktd
+				t.rotation.z -= rt
 			}, interval)
 			console.log('pressed T')}
 		if (keyboard.pressed("Y")){
 			y.position.y += ktd
+			y.rotation.z += rt
 			setTimeout(function(){
 				y.position.y -= ktd
+				y.rotation.z -= rt
 			}, interval)
 			console.log('pressed Y')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
