@@ -266,6 +266,30 @@ function drawKeyboard() {
 	e.position.x = 0
 	scene.add(e);
 
+	u = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	u.position.y = 150
+	u.position.z = -121
+	u.position.x = 0
+	scene.add(u);
+
+	i = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	i.position.y = 150
+	i.position.z = -68
+	i.position.x = 0
+	scene.add(i);
+
+	d = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	d.position.y = 150
+	d.position.z = -15
+	d.position.x = 0
+	scene.add(d);
+
+	h = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
+	h.position.y = 150
+	h.position.z = 38
+	h.position.x = 0
+	scene.add(h);
+
 	for (var i = 0; i < keyArray.length; i++) {
 
 		keyArray[i] = keyArray[i].clone()
