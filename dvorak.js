@@ -292,19 +292,19 @@ function drawKeyboard() {
 
 	t = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
 	t.position.y = 150
-	t.position.z = -68
+	t.position.z = 91
 	t.position.x = 0
 	scene.add(t);
 
 	n = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
 	n.position.y = 150
-	n.position.z = -15
+	n.position.z = 144
 	n.position.x = 0
 	scene.add(n);
 
 	s = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xC8E6C9}))
 	s.position.y = 150
-	s.position.z = 38
+	s.position.z = 197
 	s.position.x = 0
 	scene.add(s);
 
