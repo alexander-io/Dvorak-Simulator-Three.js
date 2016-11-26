@@ -276,7 +276,23 @@ function drawKeyboard() {
 	backSpace.position.x = 80
 	scene.add(backSpace);
 
-	
+	let qMark = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xB2FF59}))
+	qMark.position.y = 150
+	qMark.position.z = 241
+	qMark.position.x = 40
+	scene.add(qMark);
+
+	let plus = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x76FF03}))
+	plus.position.y = 150
+	plus.position.z = qMark.position.z + 53
+	plus.position.x = 40
+	scene.add(plus);
+
+	let pipe = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,80), new THREE.MeshBasicMaterial({color: 0x64DD17}))
+	pipe.position.y = 150
+	pipe.position.z = 360
+	pipe.position.x = 40
+	scene.add(pipe);
 }
 
 
