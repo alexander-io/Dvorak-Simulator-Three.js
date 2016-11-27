@@ -30,6 +30,7 @@ function fillScene() {
 	scene = new THREE.Scene();
 	// scene.fog = new THREE.Fog( 0x808080, 2000, 4000 );
 	// scene.fog = new THREE.Fog( 0xffffff, 2000, 4000 );
+	scene.fog = new THREE.Fog( 0x000000, 2000, 4000 );
 
 	// LIGHTS
 
@@ -38,18 +39,21 @@ function fillScene() {
 	var light = new THREE.DirectionalLight( 0x000000, 0.7 );
 	light.position.set( 200, 500, 500 );
 
-	scene.add( light );
+	// scene.add( light );
 
 	light = new THREE.DirectionalLight( 0xffffff, 0.9 );
 	light.position.set( -200, 100, 0 );
 
-	scene.add( light );
+	// scene.add( light );
 
-	// var spotLight = new THREE.SpotLight( 0xffffff );
-	// spotLight.position.set( 0, 500, 0 );
-	//
-	// spotLight.castShadow = true;
-	//
+
+	var spotLight = new THREE.SpotLight( 0xffffff );
+	spotLight.position.set( 0, 500, 0 );
+
+	spotLight.castShadow = true;
+	var spotLightHelper = new THREE.SpotLightHelper( spotLight );
+	// scene.add( spotLightHelper  );
+
 	// spotLight.shadow.mapSize.width = 1024;
 	// spotLight.shadow.mapSize.height = 1024;
 	//
@@ -182,7 +186,11 @@ function drawKeyboard() {
 	scene.add(space);
 
 	// let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x000000}))
-	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), wireframe)
+	// let msm = new THREE.MeshStandardMaterial({color: 0x000000, metalness: 2, roughness: 20})
+	let mdm = new THREE.MeshDepthMaterial({color: 0x000000})
+	// let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), wireframe)
+	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), mdm)
+	// let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), msm)
 	tilde.position.y = 150
 	tilde.position.z = -373
 	tilde.position.x = 80
@@ -933,7 +941,14 @@ function animate() {
 
 	requestAnimationFrame(renderScene);
 
+	// camera.lookAt(new THREE.Vector3(0,0,0))
+	// let sceneOrigin = new THREE.Vector3(0,0,0);
+	// console.log(camera.getWorldDirection())
+	// console.log('scene origin : ', sceneOrigin)
+	// camera.lookAt(sceneOrigin)
 
+	// fix the camera to look at this position
+	cameraControls.target.set(0,200,0);
 	window.requestAnimationFrame(animate);
 	render();
 }
@@ -942,6 +957,7 @@ function render() {
 	var delta = clock.getDelta();
 	cameraControls.update(delta);
 	renderer.render(scene, camera);
+
 }
 
 try {
