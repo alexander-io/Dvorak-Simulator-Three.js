@@ -2,7 +2,6 @@
 /*global THREE, Coordinates, document, window  */
 var camera, scene, renderer;
 var cameraControls;
-// var lureGlow;
 var controls;
 var gui;
 var keyBoard;
@@ -13,14 +12,9 @@ var colon, quote, lessthan, greaterthan
 // set key-travel-distance, abbreviated 'ktd' to determine how much the keys move
 var ktd = 7;
 var interval = 1500;
+
 // rotationToggle to controll rotation of keys, abbreviated rt
 var rt = .3;
-// var windowRing, windowRing2, windowRing3, windowRing4, windowRing5, windowRing6;
-// var leftArmGroup, rightArmGroup;
-// var armGroup, armGroup2;
-// var armBase, armBase2, arm, arm2;
-
-// var robo;
 
 var keyboard = new KeyboardState();
 
@@ -28,8 +22,6 @@ var clock = new THREE.Clock();
 
 function fillScene() {
 	scene = new THREE.Scene();
-	// scene.fog = new THREE.Fog( 0x808080, 2000, 4000 );
-	// scene.fog = new THREE.Fog( 0xffffff, 2000, 4000 );
 	scene.fog = new THREE.Fog( 0x000000, 2000, 4000 );
 
 	// LIGHTS
@@ -39,34 +31,17 @@ function fillScene() {
 	var light = new THREE.DirectionalLight( 0x000000, 0.7 );
 	light.position.set( 200, 500, 500 );
 
-	// scene.add( light );
-
 	light = new THREE.DirectionalLight( 0xffffff, 0.9 );
 	light.position.set( -200, 100, 0 );
-
-	// scene.add( light );
-
 
 	var spotLight = new THREE.SpotLight( 0xffffff );
 	spotLight.position.set( 0, 500, 0 );
 
 	spotLight.castShadow = true;
 	var spotLightHelper = new THREE.SpotLightHelper( spotLight );
-	// scene.add( spotLightHelper  );
-
-	// spotLight.shadow.mapSize.width = 1024;
-	// spotLight.shadow.mapSize.height = 1024;
-	//
-	// spotLight.shadow.camera.near = 500;
-	// spotLight.shadow.camera.far = 4000;
-	// spotLight.shadow.camera.fov = 30;
-	//
-	// scene.add( spotLight );
-
 
 	//grid xz
 	var gridXZ = new THREE.GridHelper(2000, 100, new THREE.Color(0xCCCCCC), new THREE.Color(0x888888));
-	// scene.add(gridXZ);
 
 	//axes
 	var axes = new THREE.AxisHelper(500);
@@ -77,7 +52,6 @@ function fillScene() {
 	var materialArray = [];
 	materialArray.push(new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( 'images/space/drakeq_lf.png' ) }));
 	materialArray.push(new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( 'images/space/drakeq_rt.png' ) }));
-
 
 	materialArray.push(new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( 'images/space/drakeq_up.png' ) }));
 	materialArray.push(new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( 'images/space/drakeq_dn.png' ) }));
@@ -91,9 +65,6 @@ function fillScene() {
 	var skyboxGeom = new THREE.CubeGeometry( 5000, 5000, 5000, 1, 1, 1 );
 	var skybox = new THREE.Mesh( skyboxGeom, skyboxMaterial );
 	scene.add( skybox );
-
-
-
 
 	drawKeyboard();
 }
@@ -112,10 +83,7 @@ function drawKeyboard() {
 
 	var material = new THREE.MeshPhongMaterial( {
 	    color: 0xffffff,
-			// alphaMap : 0x0f0f0f0f,
-		  // alpha: 0x0f0f0f0f,
 	    specular: 0x050505,
-
 	    shininess: 1000
 	} ) ;
 
@@ -129,11 +97,9 @@ function drawKeyboard() {
 	cylClone.position.z = 0;
 
 	var dvorakImg = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/dvorak.png')})
-	// var cube = new THREE.Mesh(new THREE.BoxBufferGeometry(270,200,800), new THREE.MeshBasicMaterial({color: 0x00ff00}))
 	var cube = new THREE.Mesh(new THREE.BoxBufferGeometry(270,200,800), dvorakImg)
 	cube.rotation.z = 90*(Math.PI/180)
 	cube.rotation.y = 180*(Math.PI/180)
-	// scene.add(cube)
 
 	let ctrlKey = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,75), new THREE.MeshBasicMaterial({color: 0x00C853}))
 	ctrlKey.position.y = 150
@@ -152,8 +118,6 @@ function drawKeyboard() {
 	shiftKey2.position.y = 150
 	shiftKey2.position.z = -340
 	shiftKey2.position.x = -40
-	// shiftKey2 = shiftKey.clone()
-	// shiftKey2.position.z = shiftKey.position.z*-1
 	scene.add(shiftKey, shiftKey2)
 
 
@@ -162,7 +126,6 @@ function drawKeyboard() {
 	macKey.position.z = 240
 	macKey.position.x = -80
 	let macKey2 = macKey.clone()
-	// macKey2.position.z = macKey.position.z*-1
 	macKey2.position.z = -295
 	scene.add(macKey, macKey2)
 
@@ -171,26 +134,21 @@ function drawKeyboard() {
 	altKey.position.z = 175
 	altKey.position.x = -80
 	let altKey2 = altKey.clone()
-	// altKey2.position.z = altKey.position.z*-1
 	altKey2.position.z = -225
 	scene.add(altKey, altKey2)
 
 	var spaceMap = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/spaceMap.png')})
-	// let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
-	var wireframe = new THREE.MeshBasicMaterial({wireframe: true, wireframeLinewidth:2, color: 0x18FFFF})
-	space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), wireframe)
+	space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), spaceMap)
 	space.position.y = 150
 	space.position.z = -25
 	space.position.x = -80
 	space.rotation.z = 90*(Math.PI/180)
 	scene.add(space);
 
-	// let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x000000}))
-	// let msm = new THREE.MeshStandardMaterial({color: 0x000000, metalness: 2, roughness: 20})
 	let mdm = new THREE.MeshDepthMaterial({color: 0x000000})
-	// let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), wireframe)
-	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), mdm)
-	// let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), msm)
+	var wireframe = new THREE.MeshBasicMaterial({wireframe: true, wireframeLinewidth:2, color: 0x18FFFF})
+	let tilde = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), wireframe)
+
 	tilde.position.y = 150
 	tilde.position.z = -373
 	tilde.position.x = 80
@@ -208,7 +166,6 @@ function drawKeyboard() {
 	two.position.z = -267
 	two.position.x = 80
 	scene.add(two);
-
 
 	three = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xA5D6A7}))
 	three.position.y = 150
@@ -233,7 +190,6 @@ function drawKeyboard() {
 	six.position.z = -53
 	six.position.x = 80
 	scene.add(six);
-
 
 	seven = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x43A047}))
 	seven.position.y = 150
@@ -326,8 +282,6 @@ function drawKeyboard() {
 	scene.add(s);
 
 	// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
 
 	colon = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0xE8F5E9}))
 	colon.position.y = 150
@@ -457,17 +411,14 @@ function drawKeyboard() {
 		keyArray[i] = keyArray[i].clone()
 		keyArray[i].position.x -=40
 		keyArray[i].position.z +=30
-		// scene.add(keyArray[i])
 
 		keyArray[i] = keyArray[i].clone()
 		keyArray[i].position.x -=40
 		keyArray[i].position.z +=10
-		// scene.add(keyArray[i])
 
 		keyArray[i] = keyArray[i].clone()
 		keyArray[i].position.x -=40
 		keyArray[i].position.z +=27
-		// scene.add(keyArray[i])
 	}
 
 	let leftCurly = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,50), new THREE.MeshBasicMaterial({color: 0x69F0AE}))
@@ -539,6 +490,7 @@ function drawKeyboard() {
 
 
 function init() {
+	// define canvas dimensions
 	var canvasWidth = 1000;
 	var canvasHeight = 400;
 	var canvasRatio = canvasWidth / canvasHeight;
@@ -556,39 +508,13 @@ function init() {
 		this.keyTravelDistance = 3.00;
 		this.keyRotation = .3;
 		this.timeInterval = 1500;
-
-		// this.rotationSpeedX = 0.00;
-		// this.rotationSpeedY = 0.01;
-		// this.rotationSpeedZ = 0.01;
-		// this.leftTurretRotation = 0.01;
-		// this.rightTurretRotation = 0.01;
-		// this.armRotation = 0.0;
-		// this.armRotation2 = 0.0;
 	}
 
+	// gui conrtols
 	gui = new dat.GUI();
 	gui.add(controls, 'keyTravelDistance', -7, 7)
 	gui.add(controls, 'timeInterval', 250, 5000)
 	gui.add(controls, 'keyRotation', 0, 1)
-	// gui.add(controls, 'rotationSpeedX', 0, 0.5);
-	// gui.add(controls, 'rotationSpeedY', 0, 0.5);
-	// gui.add(controls, 'rotationSpeedZ', 0, 0.5);
-	// gui.add(controls, 'leftTurretRotation', 0, 0.5);
-	// gui.add(controls, 'rightTurretRotation', 0, 0.5);
-	// gui.add(controls, 'armRotation', -1.0, 1.0);
-	// gui.add(controls, 'armRotation2', -1.0, 1.0);
-
-	// renderScene();
-
-	// function renderScene(){
-		// space.position.y +=
-	// // 	// lureGlow.rotation.x += controls.rotationSpeedX;
-	// // 	// lureGlow.rotation.y += controls.rotationSpeedY;
-	// // 	// lureGlow.rotation.z += controls.rotationSpeedZ;
-
-	// }
-	//
-	// requestAnimationFrame(renderScene);
 
 	// CAMERA
 	camera = new THREE.PerspectiveCamera( 45, canvasRatio, 1, 16000 );
@@ -596,7 +522,7 @@ function init() {
 	// CONTROLS
 	cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
 	camera.position.set( -470, 350, 0);
-	// camera.rotation.y = 180*(Math.PI/180)
+
 	cameraControls.target.set(0,180,0);
 }
 
@@ -611,24 +537,11 @@ function animate() {
 		ktd = controls.keyTravelDistance;
 		interval = controls.timeInterval;
 		rt = controls.keyRotation;
-		// lureGlow.rotation.x += controls.rotationSpeedX;
-		// lureGlow.rotation.y += controls.rotationSpeedY;
-		// lureGlow.rotation.z += controls.rotationSpeedZ;
 
-		// windowRing.rotation.x = windowRing2.rotation.x = windowRing3.rotation.x = controls.leftTurretRotation;
-		// windowRing4.rotation.x = windowRing5.rotation.x = windowRing6.rotation.x = controls.rightTurretRotation;
-
-		// windowRing.rotation.x = windowRing2.rotation.x = windowRing3.rotation.x += controls.leftTurretRotation;
-		// windowRing4.rotation.x = windowRing5.rotation.x = windowRing6.rotation.x -= controls.rightTurretRotation;
-		//
-		// armGroup.rotation.z = controls.armRotation;
-		// armGroup.rotation.z = controls.armRotation;
-
-		// armGroup2.rotation.z = controls.armRotation2;
-		//
+		// for each rendered frame, update the keyboard listener
 		keyboard.update();
-		//
 
+		// listen for key strokes, respond accordingly
 		if(keyboard.pressed("space")){
 			space.position.y += ktd;
 			space.rotation.z += rt
@@ -636,7 +549,6 @@ function animate() {
 				space.position.y -= ktd;
 				space.rotation.z -= rt
 			}, interval)
-			console.log('pressed the space')
 		}
 
 		if (keyboard.pressed("Q"))
@@ -647,7 +559,7 @@ function animate() {
 				q.position.y -= ktd;
 				q.rotation.z -= rt
 			}, interval)
-			console.log('pressed q')
+
 		}
 		if (keyboard.pressed("W")){
 			w.position.y += ktd
@@ -656,7 +568,8 @@ function animate() {
 				w.position.y -= ktd
 				w.rotation.z -= rt
 			}, interval)
-			console.log('pressed w')}
+
+		}
 		if (keyboard.pressed("E")){
 			e.position.y += ktd
 			e.rotation.z += rt
@@ -664,7 +577,8 @@ function animate() {
 				e.position.y -= ktd
 				e.rotation.z -= rt
 			}, interval)
-			console.log('pressed e')}
+
+		}
 		if (keyboard.pressed("R")){
 			r.position.y += ktd
 			r.rotation.z += rt
@@ -672,7 +586,8 @@ function animate() {
 				r.position.y -= ktd
 				r.rotation.z -= rt
 			}, interval)
-			console.log('pressed R')}
+
+		}
 		if (keyboard.pressed("T")){
 			t.position.y += ktd
 			t.rotation.z += rt
@@ -680,7 +595,8 @@ function animate() {
 				t.position.y -= ktd
 				t.rotation.z -= rt
 			}, interval)
-			console.log('pressed T')}
+
+		}
 		if (keyboard.pressed("Y")){
 			y.position.y += ktd
 			y.rotation.z += rt
@@ -688,7 +604,8 @@ function animate() {
 				y.position.y -= ktd
 				y.rotation.z -= rt
 			}, interval)
-			console.log('pressed Y')}
+			
+		}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("U")){
 			u.position.y += ktd
@@ -697,7 +614,8 @@ function animate() {
 				u.position.y -= ktd
 				u.rotation.z -= rt
 			}, interval)
-			console.log('pressed U')}
+			// console.log('pressed U')
+		}
 		if (keyboard.pressed("I")){
 			eye.position.y += ktd
 			eye.rotation.z += rt
@@ -705,7 +623,8 @@ function animate() {
 				eye.position.y -= ktd
 				eye.rotation.z -= rt
 			}, interval)
-			console.log('pressed I')}
+			// console.log('pressed I')
+		}
 		if (keyboard.pressed("O")){
 			o.position.y += ktd
 			o.rotation.z += rt
@@ -713,7 +632,8 @@ function animate() {
 				o.position.y -= ktd
 				o.rotation.z -= rt
 			}, interval)
-			console.log('pressed O')}
+			// console.log('pressed O')
+		}
 		if (keyboard.pressed("P")){
 			p.position.y += ktd
 			p.rotation.z += rt
@@ -721,7 +641,8 @@ function animate() {
 				p.position.y -= ktd
 				p.rotation.z -= rt
 			}, interval)
-			console.log('pressed P')}
+			// console.log('pressed P')
+		}
 		if (keyboard.pressed("A")){
 			a.position.y += ktd
 			a.rotation.z += rt
@@ -729,7 +650,8 @@ function animate() {
 				a.position.y -= ktd
 				a.rotation.z -= rt
 			}, interval)
-			console.log('pressed A')}
+			// console.log('pressed A')
+		}
 		if (keyboard.pressed("S")){
 			s.position.y += ktd
 			s.rotation.z += rt
@@ -737,7 +659,8 @@ function animate() {
 				s.position.y -= ktd
 				s.rotation.z -= rt
 			}, interval)
-			console.log('pressed S')}
+			// console.log('pressed S')
+		}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("D")){
 			d.position.y += ktd
@@ -746,7 +669,8 @@ function animate() {
 				d.position.y -= ktd
 				d.rotation.z -= rt
 			}, interval)
-			console.log('pressed D')}
+			// console.log('pressed D')
+		}
 		if (keyboard.pressed("F")){
 			f.position.y += ktd
 			f.rotation.z += rt
@@ -754,7 +678,8 @@ function animate() {
 				f.position.y -= ktd
 				f.rotation.z -= rt
 			}, interval)
-			console.log('pressed F')}
+			// console.log('pressed F')
+		}
 		if (keyboard.pressed("G")){
 			g.position.y += ktd
 			g.rotation.z += rt
@@ -762,7 +687,8 @@ function animate() {
 				g.position.y -= ktd
 				g.rotation.z -= rt
 			}, interval)
-			console.log('pressed G')}
+			// console.log('pressed G')
+		}
 		if (keyboard.pressed("H")){
 			h.position.y += ktd
 			h.rotation.z += rt
@@ -770,7 +696,8 @@ function animate() {
 				h.position.y -= ktd
 				h.rotation.z -= rt
 			}, interval)
-			console.log('pressed H')}
+			// console.log('pressed H')
+		}
 		if (keyboard.pressed("J")){
 			j.position.y += ktd
 			j.rotation.z += rt
@@ -778,7 +705,8 @@ function animate() {
 				j.position.y -= ktd
 				j.rotation.z -= rt
 			}, interval)
-			console.log('pressed J')}
+			// console.log('pressed J')
+		}
 		if (keyboard.pressed("K")){
 			k.position.y += ktd
 			k.rotation.z += rt
@@ -786,7 +714,8 @@ function animate() {
 				k.position.y -= ktd
 				k.rotation.z -= rt
 			}, interval)
-			console.log('pressed K')}
+			// console.log('pressed K')
+		}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("L")){
 			l.position.y += ktd
@@ -795,7 +724,8 @@ function animate() {
 				l.position.y -= ktd
 				l.rotation.z -= rt
 			}, interval)
-			console.log('pressed L')}
+			// console.log('pressed L')
+		}
 		if (keyboard.pressed("Z")){
 			z.position.y += ktd
 			z.rotation.z += rt
@@ -803,7 +733,8 @@ function animate() {
 				z.position.y -= ktd
 				z.rotation.z -= rt
 			}, interval)
-			console.log('pressed Z')}
+			// console.log('pressed Z')
+		}
 		if (keyboard.pressed("X")){
 			x.position.y += ktd
 			x.rotation.z += rt
@@ -811,7 +742,8 @@ function animate() {
 				x.position.y -= ktd
 				x.rotation.z -= rt
 			}, interval)
-			console.log('pressed X')}
+			// console.log('pressed X')
+		}
 		if (keyboard.pressed("C")){
 			c.position.y += ktd
 			c.rotation.z += rt
@@ -819,7 +751,8 @@ function animate() {
 				c.position.y -= ktd
 				c.rotation.z -= rt
 			}, interval)
-			console.log('pressed C')}
+			// console.log('pressed C')
+		}
 		if (keyboard.pressed("V")){
 			v.position.y += ktd
 			v.rotation.z += rt
@@ -827,7 +760,8 @@ function animate() {
 				v.position.y -= ktd
 				v.rotation.z -= rt
 			}, interval)
-			console.log('pressed V')}
+			// console.log('pressed V')
+		}
 		if (keyboard.pressed("B")){
 			b.position.y += ktd
 			b.rotation.z += rt
@@ -835,7 +769,8 @@ function animate() {
 				b.position.y -= ktd
 				b.rotation.z -= rt
 			}, interval)
-			console.log('pressed B')}
+			// console.log('pressed B')
+		}
 
 		if (keyboard.pressed("N")){
 			n.position.y += ktd
@@ -844,7 +779,8 @@ function animate() {
 				n.position.y -= ktd
 				n.rotation.z -= rt
 			}, interval)
-			console.log('pressed N')}
+			// console.log('pressed N')
+		}
 		if (keyboard.pressed("M")){
 			m.position.y += ktd
 			m.rotation.z += rt
@@ -852,7 +788,8 @@ function animate() {
 				m.position.y -= ktd
 				m.rotation.z -= rt
 			}, interval)
-			console.log('pressed M')}
+			// console.log('pressed M')
+		}
 
 
 
@@ -863,7 +800,8 @@ function animate() {
 				one.position.y -= ktd
 				one.rotation.z -= rt
 			}, interval)
-			console.log('pressed 1')}
+			// console.log('pressed 1')
+		}
 		if(keyboard.pressed("2")){
 			two.position.y += ktd
 			two.rotation.x += rt
@@ -871,7 +809,8 @@ function animate() {
 				two.position.y -= ktd
 				two.rotation.x -= rt
 			}, interval)
-			console.log('pressed 2')}
+			// console.log('pressed 2')
+		}
 		if(keyboard.pressed("3")){
 			three.position.y += ktd
 			three.rotation.z += rt
@@ -879,7 +818,8 @@ function animate() {
 				three.position.y -= ktd
 				three.rotation.z -= rt
 			}, interval)
-			console.log('pressed 3')}
+			// console.log('pressed 3')
+		}
 		if(keyboard.pressed("4")){
 			four.position.y += ktd
 			four.rotation.x += rt
@@ -887,7 +827,8 @@ function animate() {
 				four.position.y -= ktd
 				four.rotation.x -= rt
 			}, interval)
-			console.log('pressed 4')}
+			// console.log('pressed 4')
+		}
 		if(keyboard.pressed("5")){
 			five.position.y += ktd
 			five.rotation.z += rt
@@ -895,7 +836,8 @@ function animate() {
 				five.position.y -= ktd
 				five.rotation.z -= rt
 			}, interval)
-			console.log('pressed 5')}
+			// console.log('pressed 5')
+		}
 		if(keyboard.pressed("6")){
 			six.position.y += ktd
 			six.rotation.x += rt
@@ -903,7 +845,8 @@ function animate() {
 				six.position.y -= ktd
 				six.rotation.x -= rt
 			}, interval)
-			console.log('pressed 6')}
+			// console.log('pressed 6')
+		}
 		if(keyboard.pressed("7")){
 			seven.position.y += ktd
 			seven.rotation.z += ktd
@@ -911,7 +854,8 @@ function animate() {
 				seven.position.y -= ktd
 				seven.rotation.z -= ktd
 			}, interval)
-			console.log('pressed 7')}
+			// console.log('pressed 7')
+		}
 		if(keyboard.pressed("8")){
 			eight.position.y += ktd
 			eight.rotation.x += ktd
@@ -919,7 +863,8 @@ function animate() {
 				eight.position.y -= ktd
 				eight.rotation.x -= ktd
 			}, interval)
-			console.log('pressed 8')}
+			// console.log('pressed 8')
+		}
 		if(keyboard.pressed("9")){
 			nine.position.y += ktd
 			nine.rotation.z += ktd
@@ -927,7 +872,8 @@ function animate() {
 				nine.position.y -= ktd
 				nine.rotation.z -= ktd
 			}, interval)
-			console.log('pressed 9')}
+			// console.log('pressed 9')
+		}
 		if(keyboard.pressed("0")){
 			zero.position.y += ktd
 			zero.rotation.x += ktd
@@ -935,7 +881,8 @@ function animate() {
 				zero.position.y -= ktd
 				zero.rotation.x -= ktd
 			}, interval)
-			console.log('pressed 0')}
+			// console.log('pressed 0')
+		}
 
 	}
 
@@ -968,4 +915,63 @@ try {
 } catch(error) {
 	console.log("Your program encountered an unrecoverable error, can not draw on canvas. Error was:");
 	console.log(error);
+}
+
+// this is a method used to change the color of a passed key
+// we will accept the key to change and the interval time as arguments
+// the key will change colors traveling in one direction across the color spectrum
+// for the duration of the clock parameter (in milliseconds)
+// next
+var chameleon = function(key){
+
+	// if (key.material.color.r + key.material.color.g + key.material.color.b > .9){
+	//
+	// }
+
+	let incrementVariable = 0.01;
+	var clock = 110
+
+	let interval = setInterval(function(){
+		key.material.color.r += incrementVariable
+		key.material.color.b += incrementVariable
+		key.material.color.g += incrementVariable
+	}, clock)
+
+
+	setTimeout(function(){
+		clearInterqval(interval)
+		console.log('set timeout executed')
+		interval = setInterval(function(){
+			if (key.material.color.r + key.material.color.g + key.material.color.b > 0.01){
+				console.log('decrementing')
+				key.material.color.r -= incrementVariable*1.5
+				key.material.color.g -= incrementVariable*1.5
+				key.material.color.b -= incrementVariable*1.5
+				console.log('key color sum : ', key.material.color.r + key.material.color.g + key.material.color.b)
+			}
+		}, clock)
+
+
+	}, clock*8)
+
+	setTimeout(function(){
+		clearInterval(interval)
+	}, clock*16)
+
+	// if (q.material.color.r + q.material.color.g + q.material.color.b > 0.99){
+	// 	// if (q.material.color.r + q.material.color.g + q.color.material.b < 0.01) {
+	// 	clearInterval(interval)
+	// 	interval = setInterval(function(){
+	// 		q.material.color.r -= 0.00392156862745
+	// 		q.material.color.g -= 0.00392156862745
+	// 		q.material.color.b -= 0.00392156862745
+	// 	}, 1)
+	// } else {
+	// 	clearInterval(interval)
+	// 	interval = setInterval(function(){
+	// 		q.material.color.r += 0.00392156862745
+	// 		q.material.color.g += 0.00392156862745
+	// 		q.material.color.b += 0.00392156862745
+	// 	}, 1)
+	// }
 }
